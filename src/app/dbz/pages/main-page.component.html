@@ -5,7 +5,8 @@
   <div class="col">
     <!-- onDelete-->
     <dbz-list [characterList]="characters"
-    (onDelete)="onDeleteCharacter($event)"></dbz-list>
+    (onDelete)="onDeleteCharacter($event)"></dbz-list> <!-- El dbz list a través del array characterList se encarga de mostrar todos los personajes, 
+    y el evento onDelete se emite cuando se elimina un personaje -->
 
 
 
@@ -13,7 +14,7 @@
 
   <div class="col">
 
-    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character> <!-- Evento que se encarga de añadir un nuevo personaje --> 
 
 
 
