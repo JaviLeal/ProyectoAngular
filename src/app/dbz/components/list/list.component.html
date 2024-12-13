@@ -1,6 +1,7 @@
 <p>list works!</p>
 <h4>Listado</h4>
-<ul class="list-group">
+<ul class="list-group">  <!-- Lista para poder darle un estilo con la clase "list-group" de bootstrap, en cuanto a el ngFor, 
+  permite recorrer todos los personajes y mostrarlos -->
   <li *ngFor="
   let character of characterList;
   let i =index;
@@ -9,21 +10,22 @@
   let isEven = even;
   let isOdd = odd;
   "
-  class="list-group-item d-flex justify-content-between
+  class="list-group-item d-flex justify-content-between  
   align-items-center"
   [ngClass]="{
     'list-group-item-dark': isLast,
     'list-group-item-primary': isEven
-  }">
+  }"> <!-- Con el class = "..." estiliza cada ítem, con los dos list-group, a el último objeto y al primero se le asigna la clase 
+    que tienen entre comillas -->
 
   <div>
     <span class="text-primary">{{i+1}}</span>
     <span>{{ character.name}} - </span>
     <strong>Power: </strong>
     <span>{{character.power}}</span>
-  </div>
+  </div>  <!-- Se muestran los datos del personaje -->
 
-  <button class="btn btn-danger" (click)="onDeteteCharacter(i)" >X</button>
+  <button class="btn btn-danger" (click)="onDeteteCharacter(i)" >X</button> <!-- Botón que elimina el personaje -->
 
   </li>
 </ul>
