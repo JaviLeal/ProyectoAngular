@@ -1,23 +1,26 @@
-<p>add-character works!</p>
+<p>add-character works!</p> 
 <h4>Agregar personaje</h4>
-    <form class="row" (ngSubmit)="emitCharacter()">
+    <form class="row" (ngSubmit)="emitCharacter()">  <!-- El ngSubmit se ejecuta cuando se envía el formulario -->
       <input type="text"
       [(ngModel)]="character.name"
       name="name"
       class="form-control mb-2"
-      placeholder="Nombre">
+      placeholder="Nombre">  <!-- El ngModel character.name cuando se ingresa un valor se asigna automáticamente a la propiedad name
+      objeto character -->
 
       <input type="number"
       [(ngModel)]="character.power"
       name="power"
       class="form-control mb-2"
-      placeholder="placeholder">
+      placeholder="placeholder">  <!-- El ngModel character.power hace lo mismo que el anterior ngModel pero se enlaza con la propiedad power en vez
+      de la name -->
+      <!-- Los class = "form-control mb-2" son clases de bootstrap para darte un estilo a los campos -->
+      <!-- Cuando los campos están vacíos se muestra el placeholder que indican al usuario lo que tienen que rellenar -->
 
-      <button type="submit" class="btn btn-primary" (click)="emitCharacter()">
+      <button type="submit" class="btn btn-primary" (click)="emitCharacter()"> <!-- Se envía el formulario -->
       Agregar
     </button>
     </form>
 
-    
 
    <!-- <pre>{{character | json}}</pre> -->
